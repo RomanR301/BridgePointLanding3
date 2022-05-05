@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="38px" viewBox="0 0 40 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <defs>
+        <polygon id="path-1" points="0 0 40 0 40 38 0 38"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-189.000000, -3643.000000)">
+            <g id="Group-3" transform="translate(189.000000, 3643.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M0,17.6193287 L0,38 L17.4796976,38 L17.4796976,18.9481372 L9.97199664,18.9481372 L9.97199664,17.016599 C9.97199664,11.9480634 11.6886026,9.77543342 15.1218146,9.6548875 L17.4796976,9.53434157 L17.4796976,0 L15.2282274,0 C5.46905629,0.241091848 0,5.67126522 0,17.6193287 M37.6421171,9.6548875 L40,9.53434157 L40,0 L37.7485298,0 C27.9893587,0.241091848 22.5203024,5.67126522 22.5203024,17.6193287 L22.5203024,38 L40,38 L40,18.9481372 L32.6015122,18.9481372 L32.6015122,17.016599 C32.6015122,11.9480634 34.2089051,9.77543342 37.6421171,9.6548875" id="Fill-1" fill="#009ADE" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
