@@ -16,14 +16,13 @@ p {
 .family-main-screen {
   height: 620px;
   position: relative;
-  @media (max-width: $breakpoint-xl) {
-    height: 460px;
-  }
   @media (max-width: $breakpoint-lg) {
-    padding: 60px 0;
+    height: 545px;
+    padding: 130px 0 40px 0;
   }
   @media (max-width: $breakpoint-md) {
-    padding: 50px 0 30px 0;
+    height: auto;
+    padding: 65px 0 40px 0;
   }
   & .container {
     height: 100%;
@@ -47,23 +46,16 @@ p {
     & img {
       @include defaultIcon(cover);
       object-position: top;
-      @media (max-width: $breakpoint-xl) {
-        object-position: left;
-      }
-      @media (max-width: $breakpoint-lg) {
-        object-position: inherit;
-      }
-    }
-    .desktop-image {
-      @media (max-width: $breakpoint-lg) {
-        display: none;
-      }
     }
     .mobile-image {
       display: none;
-      @media (max-width: $breakpoint-lg) {
+      @media (max-width: 400px) {
         display: block;
-        object-position: 75%;
+      }
+    }
+    .desktop-image {
+      @media (max-width: 400px) {
+        display: none;
       }
     }
   }
@@ -79,18 +71,20 @@ p {
       letter-spacing: -1.25px;
       font-weight: 900;
       margin-bottom: 24px;
+      @media (max-width: $breakpoint-lg) {
+        font-size: 46px;
+        line-height: 54px;
+        letter-spacing: -1px; 
+      }
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 13px;
+      }
       span {
         font-weight: inherit;
         font-size: inherit;
         line-height: inherit;
         display: block;
         color: $yellowColor;
-      }
-      @media (max-width: $breakpoint-lg) {
-        font-size: 40px;
-      }
-      @media (max-width: $breakpoint-md) {
-        font-size: 36px;
       }
     }
     h2 {
@@ -100,11 +94,17 @@ p {
       font-weight: 400;
       margin-bottom: 36px;
       max-width: 900px;
+      letter-spacing: -1px;
       @media (max-width: $breakpoint-lg) {
-        font-size: 21px;
+        font-size: 24px;
+        line-height: 36px; 
+        margin-bottom: 43px;
+        max-width: 575px;
       }
       @media (max-width: $breakpoint-md) {
-        font-size: 18px;
+        font-size: 21px;
+        line-height: 31px;
+        margin-bottom: 23px;
       }
     }
   }
@@ -120,6 +120,15 @@ p {
     background: $yellowColor;
     border-color: $yellowColor;
     margin-bottom: 44px;
+    @media (max-width: $breakpoint-lg) {
+      font-size: 21px;
+      line-height: 30px;
+      margin-bottom: 36px;   
+      padding: 8px 31px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 18px;   
+    }
   }
   .btn:hover {
     background: transparent;
@@ -132,11 +141,28 @@ p {
     letter-spacing: -0.3px;
     font-weight: 700;
     color: $whiteColor;
+    @media (max-width: $breakpoint-lg) {
+      font-size: 18px;
+      letter-spacing: -0.23px;
+      line-height: 36px;   
+    }
+    @media (max-width: $breakpoint-md) {
+      line-height: 26px;
+    }
   }
 }
 
 .help {
   margin: 86px 0;
+  @media (max-width: $breakpoint-xl) {
+    margin: 77px 0;
+  }
+  @media (max-width: $breakpoint-lg) {
+    margin: 50px 0 55px;
+  }
+  @media (max-width: $breakpoint-md) {
+    margin: 51px 0 60px 0;
+  }
   &__title {
     text-align: center;
     font-size: 42px;
@@ -145,6 +171,23 @@ p {
     font-weight: 900;
     margin-bottom: 20px;
     letter-spacing: -1px;
+    @media (max-width: $breakpoint-xl) {
+      font-size: 36px;
+      line-height: 53px;
+      letter-spacing: -.86px;
+      margin-bottom: 18px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: -.57px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: $breakpoint-md) {
+      line-height: 30px;
+      text-align: left;
+      max-width: 90%;
+    }
     span {
       font-size: inherit;
       font-weight: inherit;
@@ -156,14 +199,35 @@ p {
     text-align: center;
     line-height: 32px;
     margin-bottom: 56px;
+    @media (max-width: $breakpoint-xl) {
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: $breakpoint-md) {
+      text-align: left;
+    }
     a {
       text-decoration: underline;
+      font-size: inherit;
     }
   }
   &-icons {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     margin-bottom: 40px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 32px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
     &__item {
       display: flex;
       flex-direction: column;
@@ -173,11 +237,35 @@ p {
       letter-spacing: -0.5px;
       line-height: 36px;
       font-weight: 700;
+      @media (max-width: $breakpoint-xl) {
+        font-size: 21px;
+        letter-spacing: -.44px;
+        line-height: 31px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -.33px;
+      }
+      @media (max-width: $breakpoint-md) {
+        width: 50%;
+        margin-bottom: 32px;
+      }
       img {
         width: 34px;
         height: 34px;
         object-fit: contain;
         margin-bottom: 26px;
+        @media (max-width: $breakpoint-xl) {
+          width: 30px;
+          height: 30px;
+          margin-bottom: 20px;
+        }
+        @media (max-width: $breakpoint-lg) {
+          margin-bottom: 12px;
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }
@@ -190,6 +278,14 @@ p {
     &__marks {
       width: 392px;
       margin-right: 36px;
+      @media (max-width: $breakpoint-xl) {
+        width: 349px;
+        margin-right: 34px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        width: 279px;
+        margin-right: 10px;
+      }
       img {
         width: 100%;
         object-fit: contain;
@@ -198,6 +294,12 @@ p {
   
     &__google {
       width: 188px;
+      @media (max-width: $breakpoint-xl) {
+        width: 167px;
+      } 
+      @media (max-width: $breakpoint-lg) {
+        width: 133px;
+      }
       img {
         width: 100%;
         object-fit: contain;
@@ -209,58 +311,93 @@ p {
       font-weight: 700;
       line-height: 26px;
       width: 100%;
+      @media (max-width: $breakpoint-xl) {
+        margin-top: 2px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        font-size: 16px;
+      }
+      @media (max-width: $breakpoint-md) {
+        margin-top: 20px;
+      }
     }
   }
 }
 
-
 .info-block {
   padding: 108px 0;
   @media (max-width: $breakpoint-xl) {
-    padding: 50px 0;
+    padding: 90px 0;
+  }
+  @media (max-width: $breakpoint-lg) {
+    padding: 70px 0;
+  }
+  @media (max-width: $breakpoint-md) {
+    padding: 50px 0;   
+  }
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 0 50px 0;   
   }
   &.gray-bg {
-    padding: 110px 0;
     background: #f6f6f6;
-    @media (max-width: $breakpoint-xl) {
-      padding: 80px 0;
-    }
-    @media (max-width: $breakpoint-lg) {
-      padding: 68px 0;
-    }
-    @media (max-width: $breakpoint-md) {
-      padding: 50px 0 0 0;
+  }
+  &.reversed-row {
+    .container {
+      flex-direction: row-reverse;
+      @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+      }
     }
   }
-  .row {
-    justify-content: space-between;
+  &.extra-padding-mobile {
+    @media (max-width: $breakpoint-sm) {
+      padding: 50px 0;
+    }
+  }
+  .container {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    max-width: 1020px;
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column; 
+    }
+  }
+  &__content {
+    max-width: 400px;
     @media (max-width: $breakpoint-lg) {
-      align-items: unset;
+      max-width: 340px;
     }
     @media (max-width: $breakpoint-md) {
-      flex-direction: column-reverse;
+      max-width: 340px;
+    }
+    @media (max-width: $breakpoint-sm) {
+      max-width: 100%;
     }
   }
   &__image {
-    height: 100%;
+    min-width: 460px;
+    width: 460px;
+    object-fit: contain;
+    @media (max-width: $breakpoint-xl) {
+      min-width: 420px;
+      width: 420px;
+    }
     @media (max-width: $breakpoint-lg) {
-      margin: auto;
+      min-width: 320px;
+      width: 320px;
     }
     @media (max-width: $breakpoint-md) {
-      margin: 40px -15px 0 -15px;
-      width: calc(100% + 30px);
+      margin: 0 -15px 43px -15px;
+      max-width: 340px;
+      width: 100%;
       height: auto;
+    }
+    @media (max-width: $breakpoint-sm) {
+      max-width: 100%;
     }
     & img {
       @include defaultIcon(cover);
-      @media (max-width: $breakpoint-md) {
-        width: 50%;
-        margin: auto;
-      }
-      @media (max-width: $breakpoint-sm) {
-        width: 100%;
-      }
     }
   }
   &__title {
@@ -271,13 +408,11 @@ p {
     color: #014f82;
     margin-bottom: 35px;
     font-family: "HelveticaNowDisplay-XBd", sans-serif;
-    @media (max-width: $breakpoint-xl) {
-      font-size: 30px;
-      line-height: 40px;
-    }
     @media (max-width: $breakpoint-lg) {
       font-size: 24px;
       line-height: 32px;
+      margin-bottom: 16px;
+      letter-spacing: -.38px;
     }
   }
   &__line {
@@ -285,6 +420,9 @@ p {
     height: 5px;
     background: $lightBlue;
     margin-bottom: 30px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 16px;
+    }
   }
   ul {
     margin-bottom: 30px;
@@ -302,20 +440,23 @@ p {
         height: 4px;
         background: #444444;
       }
-    }
+      @media (max-width: $breakpoint-lg) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    } 
   }
   &__text {
     font-size: 18px;
     font-weight: 400;
     max-width: 380px;
+    @media (max-width: $breakpoint-lg) {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.27px;
+    }
     a {
       text-decoration: underline;
-    }
-    p {
-      margin-bottom: 15px;
-      @media (max-width: $breakpoint-lg) {
-        margin-bottom: 10px;
-      }
     }
     & strong {
       font-weight: 700;
@@ -326,8 +467,8 @@ p {
   }
   &__link {
     margin-top: 25px;
-    @media (max-width: $breakpoint-xl) {
-      font-size: 16px;
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 20px;
     }
     & a {
       font-size: 18px;
@@ -340,8 +481,35 @@ p {
 
 .testimonials {
   padding: 120px 0;
+  @media (max-width: $breakpoint-xl) {
+    padding: 80px 0;       
+  }
+  @media (max-width: $breakpoint-lg) {
+    padding: 60px 0;
+  }
+  @media (max-width: $breakpoint-md) {
+    padding: 46px 0;     
+  }
+  .container {
+    max-width: 1140px;
+    display: flex;
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+    }
+  }
   &-item {
-
+    &:first-child {
+      margin-right: 92px;
+      @media (max-width: $breakpoint-lg) {
+        margin-right: 48px; 
+      }
+      @media (max-width: $breakpoint-lg) {
+        margin-right: 40px; 
+      }
+      @media (max-width: $breakpoint-md) {
+        margin: 0 0 40px 0;
+      }
+    }
   }
   &__quote {
     margin-bottom: 20px;
@@ -353,6 +521,16 @@ p {
     line-height: 36px;
     font-weight: 700;
     margin-bottom: 24px;
+    @media (max-width: $breakpoint-xl) {
+      font-size: 21px;
+      letter-spacing: -0.44px;
+      line-height: 30px;
+    }
+    @media (max-width: $breakpoint-md) {
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: -0.38px;   
+    }
   }
   &-author {
     display: flex;
@@ -363,6 +541,10 @@ p {
       width: 90px;
       height: 90px;
       margin-right: 24px;
+      @media (max-width: $breakpoint-xl) {
+        width: 80px;
+        height: 80px;
+      }
       img {
         @include defaultIcon(contain);
       }
@@ -372,6 +554,15 @@ p {
       font-size: 24px;
       letter-spacing: -0.3px;
       line-height: 36px;
+      @media (max-width: $breakpoint-xl) {
+        font-size: 21px;
+        line-height: 30px;
+        letter-spacing: -0.25px;
+      } 
+      @media (max-width: $breakpoint-md) {
+        font-size: 18px;
+        line-height: 26px;
+      }
     }
     &__rating {
       display: flex;
@@ -380,6 +571,10 @@ p {
         margin-right: 4px;
         width: 24px;
         height: 24px;
+        @media (max-width: $breakpoint-md) {
+          width: 18px;
+          height: 18px;
+        }
       }
     }
   }
@@ -541,9 +736,6 @@ p {
       @media (max-width: $breakpoint-xl) {
         font-size: 30px;
       }
-    }
-    .btn {
-      margin-top: 25px;
     }
     p {
       margin-bottom: 10px;
