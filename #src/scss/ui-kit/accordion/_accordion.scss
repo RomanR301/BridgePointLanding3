@@ -1,0 +1,102 @@
+.accordion {
+  &-container {
+    margin: 0 -20px;
+    @media (max-width: $breakpoint-lg) {
+      margin: 0 -15px;
+    }
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #fff;
+    &:first-child {
+      border-top: 3px solid #fff;
+    }
+    &.active {
+      & .accordion__arrow {
+        &:before {
+          opacity: 0;
+          visibility: hidden;
+        }
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      & .accordion__button {
+        color: $darkBlue;
+      }
+    }
+  }
+  &__content {
+    display:none;
+    padding: 0 20px 25px 20px;
+    @media (max-width: $breakpoint-lg) {
+      padding: 0 0 14px 0;
+    }
+    & p {
+      margin: 0 0 15px 0;
+      color: $defaultText;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    & a {
+      border-bottom: 1px solid $darkBlue;
+      color: $darkBlue;
+      @include transition(.3);
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+  &__button {
+    display: block;
+    text-decoration: none;
+    color: $defaultText;
+    font-size: 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 11px 20px 12px 20px;
+    font-size: 21px;
+    line-height: 32px;
+    @include transition(.3);
+    @media (max-width: $breakpoint-lg) {
+      padding: 16px 0 12px 0;
+      font-size: 16px;
+      line-height: 26px;
+    }
+    @media (max-width: $breakpoint-md) {
+      padding: 16px 40px 12px 0;
+    }
+    & i {
+      width: 20px;
+      height: 10px;
+      @media (max-width: $breakpoint-md) {
+        position: absolute;
+        top: 55%;
+        right: 0;
+        transform: translate(0, -50%);
+      }
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 10px;
+        @include transition(.3);
+      }
+      &:before {
+        background: url('../img/arrow-bottom-grey.svg');
+      }
+      &:after {
+        opacity: 0;
+        background: url('../img/arrow-top-blue.svg');
+      }
+    }
+  }
+}
