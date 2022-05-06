@@ -65,7 +65,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    h2 {
+    h3 {
       font-size: 60px;
       color: $whiteColor;
       line-height: 1.125;
@@ -137,10 +137,21 @@ p {
   }
   &__button_text {
     font-size: 24px;
-    line-height: 36px;
+    line-height: 32px;
     letter-spacing: -0.3px;
-    font-weight: 700;
+    font-weight: 900;
     color: $whiteColor;
+    span {
+      font-size: inherit;
+      font-family: inherit;
+      line-height: inherit;
+      color: $yellowColor;
+      display: block;
+      font-weight: 900;
+      @media (max-width: $breakpoint-md) {
+        display: inline;
+      }
+    }
     @media (max-width: $breakpoint-lg) {
       font-size: 18px;
       letter-spacing: -0.23px;
@@ -595,8 +606,7 @@ p {
     padding: 50px 0;
   }
   &__heading {
-    font-family: "HelveticaNowDisplay-XBd", sans-serif;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 36px;
     line-height: 1.3;
     color: #014f82;
@@ -652,6 +662,16 @@ p {
     & a {
       font-weight: 700;
       color: $darkBlue;
+    }
+    .btn {
+      margin: 43px 0 34px 0;
+      color: $whiteColor;
+      @media (max-width: $breakpoint-lg) {
+        margin: 40px 0 24px 0;
+      }
+      &:hover {
+        color: $lightBlue;
+      }
     }
     @media (max-width: $breakpoint-lg) {
       margin: 0 -15px;
@@ -724,19 +744,17 @@ p {
       font-size: 24px;
       color: $whiteColor;
       line-height: 1.6;
-      font-weight: 700;
-      font-family: "Helvetica", sans-serif;
+      font-weight: 900;
       @media (max-width: $breakpoint-xl) {
         font-size: 21px;
       }
     }
     h2 {
-      font-family: "Helvetica", sans-serif;
       font-size: 36px;
       color: $whiteColor;
       line-height: 1.3;
       margin-bottom: 27px;
-      font-weight: 700;
+      font-weight: 900;
       @media (max-width: $breakpoint-xl) {
         font-size: 30px;
       }
